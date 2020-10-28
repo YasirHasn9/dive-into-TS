@@ -11,6 +11,8 @@ axios_1["default"].get(url).then(function (res) {
 });
 
 
+
+
 // now to see what ts do to code base 
 // run in terminal 
 // tsc nameOfTheFile  
@@ -22,5 +24,3 @@ axios_1["default"].get(url).then(function (res) {
 // node fileName.js
 // and the result is 
 // { userId: 1, id: 1, title: 'delectus aut autem', completed: false }
-
-
