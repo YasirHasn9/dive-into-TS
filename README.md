@@ -44,3 +44,26 @@ to make sure you have the ts type in you terminal tsc
 so to save you some and see how the ts works
 just run in the terminal
 ts-node file name
+
+**_ check fetchJson.ts _**
+
+what is type in ts ?
+Easy way to refer to the different properties + function that a value has, whaaaaaaaaat ?
+
+first, what is value ?
+well, in ts or js is anything that we can assign to a value.
+
+so, if i asked what is 'red'?
+there is 2 answers here
+one , you can tell me , this is just a string
+two , this is a value that has properties + methods like charAt()
+charCodeAt()
+concat()
+includes() and so on, but this is inconvenient answer you can tell this is string and in programming when we define a type of a value
+then we know that this value type has a lot of methods
+**_ every value we assign has a type _**
+
+#important
+what do we care about types ?
+allows for the ts compiler to analyze our code for errors
+and also helps other engineers to know what values are flowing around the codebase
