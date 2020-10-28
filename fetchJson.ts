@@ -8,7 +8,7 @@ const url = 'https://jsonplaceholder.typicode.com/todos/1'
 
 // fix the bug in the console.log down below
 // ----------------------------------------------
-// ixnterface in ts , it defines the structure of js object
+// interface in ts , it defines the structure of js object
 // we are saying inside our app , there is an object called Todo that has 3 properties
 // we are telling this to ts to make sure that data we are receiving , has this kind of data structure
 //  also inside the interface , we can ignore properties if we want 
@@ -35,13 +35,32 @@ axios.get(url).then(res => {
   // let finished = todo.finished; ----> old and bad mistake, will be underlyin
   let completed = todo.completed
 
-  console.log(`
-  The todo with ID: ${id}
-  Has a title of : ${title}
-  Is it completed: ${completed}
-  `)
+
+  // now i wanna make this   console.log as function 
+  // console.log(`
+  // The todo with ID: ${id}
+  // Has a title of : ${title}
+  // Is it completed: ${completed}
+  // `)
+  // now we call the function and everything goes is okay and don't have any errors
+  // but we have wrong information 
+  // to get the correct information
+  // we can use type annotation in the logTodo by using extra code
+  // once we do that, we are gonna have warning by underlying the wrong order in the function 
+  // logTodo(id , completed , title) this is was before , we got warning here 
+  logTodo(id , title , completed)
 //  fixed this code by using ts in the interface Todo
 })
 
 // what is the goal here ?
 // ts helps to catch the errors during the development
+
+
+
+// console.log
+function logTodo(id:number , title: string , completed: boolean){
+  console.log(`
+  The todo with ID: ${id}
+  Has a title of : ${title}
+  Is it completed: ${completed}`)
+}
