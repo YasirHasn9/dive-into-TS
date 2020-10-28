@@ -1,0 +1,23 @@
+{
+  "name": "dive-into-TS",
+  "version": "1.0.0",
+  "description": "in this repo im gonna learn TS and do some projects through the journey",
+  "main": "fetchJson.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YasirHasn9/dive-into-TS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YasirHasn9/dive-into-TS/issues"
+  },
+  "homepage": "https://github.com/YasirHasn9/dive-into-TS#readme",
+  "dependencies": {
+    "axios": "^0.21.0"
+  }
+}
