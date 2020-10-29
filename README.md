@@ -24,6 +24,10 @@ easy to put, the browser has no idea what is ts. so , the extra code that we use
 
 # 4. does not provide any performance optimization
 
+# ----------------------
+
+this is who the browser gets the code
+
               BROWSER
                  ^
                  |
@@ -44,6 +48,8 @@ easy to put, the browser has no idea what is ts. so , the extra code that we use
 |----------------------------------|  
 |ts code (js with type annotations)|  
 |----------------------------------|
+
+# --------------------------------------
 
 # Environment setup
 
@@ -78,6 +84,7 @@ charCodeAt()
 concat()
 includes() and so on, but this is inconvenient answer you can tell this is string and in programming when we define a type of a value
 then we know that this value type has a lot of methods
+
 **_ every value we assign has a type _**
 
 #important
