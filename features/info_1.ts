@@ -1,4 +1,4 @@
-// type annotation vs type inference 
+// type annotation vs type inference  for variables
 
 // mainly, we are gonna focus on the type inference 
 // but there are 3 cases where we want to use type annotation over inference
