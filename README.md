@@ -67,3 +67,14 @@ then we know that this value type has a lot of methods
 what do we care about types ?
 allows for the ts compiler to analyze our code for errors
 and also helps other engineers to know what values are flowing around the codebase
+
+what is type ?
+shortcut to refer to different properties and functions that a value has
+
+## type annotations and type inference
+
+type annotations tells the ts what type of value a variable refer to.
+type inference ts tries to figure out what type of value a variable refer to, automatically
+to summarize them:
+annotation done by the us
+inference done by the ts
