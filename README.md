@@ -95,7 +95,6 @@ type inference ts tries to figure out what type of value a variable refer to, au
 to summarize them:
 annotation done by the us
 inference done by the ts
-
 **_ note _**
 when ts can not predict the type of value , it referees to it as any.
 as developers try to avoid 'any' at all costs
