@@ -24,9 +24,9 @@ easy to put, the browser has no idea what is ts. so , the extra code that we use
 
 # 4. does not provide any performance optimization
 
-|----------------------------------| |---------------| |----------|
-|ts code (js with type annotations)| --> | ts complier | --> | plain js | ---> BROWSER
-|----------------------------------| |---------------| |----------|
+|----------------------------------|       |--------------- |       |----------|
+|ts code (js with type annotations)|   --> | ts complier    |   --> | plain js | ---> BROWSER
+|----------------------------------|        |---------------|       |----------|
 
 # Environment setup
 
