@@ -19,5 +19,8 @@
   "homepage": "https://github.com/YasirHasn9/dive-into-TS#readme",
   "dependencies": {
     "axios": "^0.21.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.0.5"
   }
 }

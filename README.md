@@ -105,3 +105,14 @@ inference done by the ts
 **_ note _**
 when ts can not predict the type of value , it referees to it as any.
 as developers try to avoid 'any' at all costs
+
+# -------------------
+
+we used to play with ts manually, but now we need in the browser. we can achieve this through install a global library that can do this for us \n
+
+**_ npm install -g parcel-bundler _**
+use sudo in front of it if does not work .
+
+how does it work ?
+parcel-bundler will receive a file , check it out and then gonna say
+'oh , this is ts , cool, then lets pass the code inside this file , compile it and turn it into js and then load it into the browser , happy days.
