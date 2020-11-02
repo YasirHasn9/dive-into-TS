@@ -121,7 +121,23 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 // // the code here will be parsed and complied into js in the browser through parcel-bundler
 // import {User} from "./User"
 // import {Company} from "./Company"
-new google.maps.Map(document.getElementById("map"));
+// google is referencing to the global variable 
+// to create an instant of a class we use the new keyword
+// to create an optional var in ts use the ?  at the end
+new google.maps.Map(document.getElementById("map"), {
+  // if you check the documentation of the map object you'll find that has second option argument you can 
+  // pass and which is an object, this object is also full of options you can use 
+  // read the documentation 
+
+  /**
+   * @see {@link https://developers.google.com/maps/documentation/javascript/reference/map#MapOptions}
+   */
+  zoom: 1,
+  center: {
+    lat: 0,
+    lng: 0
+  }
+});
 },{}],"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -150,7 +166,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54288" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50467" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
