@@ -116,3 +116,14 @@ use sudo in front of it if does not work .
 how does it work ?
 parcel-bundler will receive a file , check it out and then gonna say
 'oh , this is ts , cool, then lets pass the code inside this file , compile it and turn it into js and then load it into the browser , happy days.
+
+## clarification
+
+whenever we use the ts , we are allows to make use of js. which we can use and install most of the
+js libraries. however , there is one little caveat here, ts wants to check the code of js and wants to check the the types including functions and arguments and so on.
+so, in order to completely ts checks you code , it needs all the information above.
+so when we use the js library , ts cannot really automatically figure out the types
+and this is why we are getting warning when we use a js lib in ts file saying
+'could not find declaration of a module names 'Library Name' nto fix this ts have
+a Type Definition file --> you can think of it as an adopter between the js file and
+ts file.
