@@ -1,5 +1,5 @@
 // by conviction any file that we are using classes in it and export it, then
-// we Capitalize it
+// we should Capitalize it
 
 // if we hover over the faker module, we will see that we could not 
 // find a declaration for it , and ask us to install 
@@ -9,7 +9,8 @@ export class User {
   // in case we hard coded value , we initialize the properties 
   // on the same line 
   // but here we have a random data
-  // or we can do it in the constructor. also these for ts
+  // or we can do it in the constructor. 
+  // also these lines to make ts know how to deal with them.
   name:string;
   location: {
     // we can use latitude and longitude to model 

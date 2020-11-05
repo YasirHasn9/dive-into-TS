@@ -117,28 +117,73 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"src/index.ts":[function(require,module,exports) {
-// // the code here will be parsed and complied into js in the browser through parcel-bundler
-// import {User} from "./User"
-// import {Company} from "./Company"
-// google is referencing to the global variable 
+})({"src/CustomMap.ts":[function(require,module,exports) {
+"use strict"; // to hide the existence function of google map from other engineers to mess up , we are creating a custom map class
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.CustomMap = void 0;
+
+var CustomMap =
+/** @class */
+function () {
+  // to make this usable class we need to change the map but with hard coded
+  // this is why im passing a and element based on id, for its a string
+  function CustomMap(divId) {
+    this.googleMap = new google.maps.Map(document.getElementById(divId), {
+      zoom: 1,
+      center: {
+        lat: 0,
+        lng: 0
+      }
+    });
+  }
+
+  return CustomMap;
+}();
+
+exports.CustomMap = CustomMap;
+},{}],"src/index.ts":[function(require,module,exports) {
+"use strict"; // // the code here will be parsed and complied into js in the browser through parcel-bundler
+
+/*
+
+// google is referencing to the global variable
 // to create an instant of a class we use the new keyword
 // to create an optional var in ts use the ?  at the end
 new google.maps.Map(document.getElementById("map"), {
-  // if you check the documentation of the map object you'll find that has second option argument you can 
-  // pass and which is an object, this object is also full of options you can use 
-  // read the documentation 
-
-  /**
-   * @see {@link https://developers.google.com/maps/documentation/javascript/reference/map#MapOptions}
-   */
-  zoom: 1,
-  center: {
-    lat: 0,
-    lng: 0
+  // if you check the documentation of the map object you'll find that has second option argument you can
+  // pass, which is an object, this object is also full of options you can use
+  // read the documentation
+   @see {@link https://developers.google.com/maps/documentation/javascript/reference/map#MapOptions}
+   
+  zoom:1,
+  center:{
+    lat:0,
+    lng:0
   }
+})
+
+// so the map object/class holds a lot of methods/functions
+// we are here kinda concerned about the next developer to play with
+// them , so we aim to make them hidden
+// to make this ?
+// we need to make a way to limit the access to these functions
+// by making this file so limit
+// so we are making a custom map that can do this for us
+// you only make new map and called the function that we created
+// inside
+*/
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
 });
-},{}],"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+var CustomMap_1 = require("./CustomMap");
+
+new CustomMap_1.CustomMap("map"); // the googleMap inside is private
+},{"./CustomMap":"src/CustomMap.ts"}],"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -166,7 +211,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50467" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53204" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
